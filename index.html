@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>GIFTASTIC</title>
+    <!-- Font Awesome CDN -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Link to CSS sheet -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+
+<body>
+    <h1>GIF-TASTIC</h1>
+    <div class="container">
+        <!-- Div For Buttions -->
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8" id="button-div">
+            </div>
+        </div>
+        <!-- Div for user input form -->
+        <div class="row">
+            <div class="col-sm-7"></div>
+            <div class="col-sm-4">
+                <small class="form-text text-muted">Add an animal to GIF!</small>
+                <form id="button-form" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="animal-input">
+                        <br>
+
+                        <!-- Button triggers new gif to be added -->
+                        <button type="submit" id="add-button" class="btn btn-primary">
+                            <i class="far fa-hand-point-left"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Div to hold gifs -->
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8" id="gif-div">
+
+            </div>
+        </div>
+
+        <!-- Jquery Link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- JS Link -->
+        <script src="Assets/javascript/app.js"></script>
+
+</body>
+
+</html>
