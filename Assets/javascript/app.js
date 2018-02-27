@@ -1,13 +1,16 @@
 //array of button values
-var animalArray = ["Dog", "Bird", "Tiger", "Hippo"];
+var animalArray = ["Puppy", "Bird", "Cat", "Lion"];
 
+//when an animal button is clicked, The Gifs will be displayed
 $(document).on("click", ".animals", displayGifs);
 
+//When A Gif is clicked, it will be paused or played.
 $(document).on("click", ".animalGif", stillAnimate);
 
+//function to display buttons to screen
 function renderButtons() {
   $("#button-div").empty();
-
+  //for loop to display all animals in array
   for (var i = 0; i < animalArray.length; i++) {
     var a = $("<button class = 'btn btn-outline-success btn-lg animals'>");
     // Adding a data-attribute
@@ -18,22 +21,27 @@ function renderButtons() {
     $("#button-div").append(a);
   }
 }
-
+//call RenderButtons so initial array will be displayed.
 renderButtons();
 
+//Function to add the Animal user has input
 $("#add-button").on("click", function(event) {
   event.preventDefault();
+  //grabbing value of users input
   var animal = $("#animal-input")
     .val()
     .trim();
-  animalArray.push(animal);
+  animalArray.push(animal); //add it to the array
   console.log(animalArray);
+  //re-render the buttons so they mirror array's current status
   renderButtons();
 });
 
+//displays Gifs, called on line 5
 function displayGifs() {
   var animalName = $(this).attr("data-name");
   console.log(animalName);
+  //giphyAPI
   var queryURL =
     "https://api.giphy.com/v1/gifs/search?q=" +
     animalName +
@@ -76,6 +84,7 @@ function displayGifs() {
   });
 }
 
+//function to pause and animate gifs.
 function stillAnimate() {
   var state = $(this).attr("data-state");
   if (state === "still") {
