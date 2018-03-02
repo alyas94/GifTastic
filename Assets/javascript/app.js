@@ -12,7 +12,7 @@ function renderButtons() {
   $("#button-div").empty();
   //for loop to display all animals in array
   for (var i = 0; i < animalArray.length; i++) {
-    var a = $("<button class = 'btn btn-outline-success btn-lg animals'>");
+    var a = $("<button class = 'btn btn-success btn-lg animals'>");
     // Adding a data-attribute
     a.attr("data-name", animalArray[i]);
     // Providing the initial button text
